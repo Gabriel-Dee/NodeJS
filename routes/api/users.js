@@ -3,7 +3,7 @@ const router = express.Router()
 const uuid = require('uuid')
 let users = require('../../Users')
 
-// get users
+// get users from JSON
 router.get('/', (req, res) => {
     res.json(users)
 })
