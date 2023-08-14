@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
     res.json(users)
 })
 
-// get users by id
+// get users by id from Json
 router.get('/:id', (req, res) => {
     const found = users.some(user => user.id === parseInt(req.params.id))
 
