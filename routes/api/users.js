@@ -3,12 +3,12 @@ const router = express.Router()
 const uuid = require('uuid')
 let users = require('../../Users')
 
-// get users from JSON
+// get users
 router.get('/', (req, res) => {
     res.json(users)
 })
 
-// get users by id from Json
+// get users by id
 router.get('/:id', (req, res) => {
     const found = users.some(user => user.id === parseInt(req.params.id))
 
