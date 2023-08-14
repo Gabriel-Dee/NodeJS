@@ -21,14 +21,23 @@ router.get('/:id', (req, res) => {
 
 // Create new user
 router.post('/', (req,res) => {
+    const requiredFields = ['name', 'email', 'address', 'phone', 'website', 'company'];
+
     const newUser = {
         id: uuid.v4(),
         name: req.body.name,
         email: req.body.email,
-    }
+        address: req.body.address,
+        phone: req.body.phone,
+        website: req.body.website,
+        company: req.body.company,
+    };
 
-    if(!newUser.name || !newUser.email){
-        return res.sendStatus(400)
+        
+    for (const field of requiredFields) {
+        if (!req.body[field]) {
+            return res.status(400).send(`Missing ${field} field`);
+        }
     }
 
     users.push(newUser)
