@@ -1,3 +1,5 @@
+// Json File containing dummy users
+
 const users = [
     {
       "id": 1,
