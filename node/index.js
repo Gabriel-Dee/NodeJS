@@ -45,7 +45,7 @@ app.get('/movies', (req, res) => {
     res.json(movies)
 })
 
-// add movies to the list
+// add movies to the list.
 app.post('/movies', (req, res) => {
     const newMovie = req.body
 
