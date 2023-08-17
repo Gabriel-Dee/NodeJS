@@ -66,7 +66,7 @@ app.get('/movies/:id', (req, res) => {
      res.status(404).send("Not found!")
 })
 
-// delete a movie from the list
+// delete a movie from the list.
 app.delete('/movies/:id', (req, res) => {
     const id = req.params.id
     movies = movies.filter(movie => {
