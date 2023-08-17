@@ -40,7 +40,7 @@ let movies =[
   ]
   
 
-// get movies
+// get movies from the list
 app.get('/movies', (req, res) => {
     res.json(movies)
 })
