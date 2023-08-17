@@ -43,16 +43,11 @@ app.get('/movies', (req, res) => {
 
 // add movies to the list
 app.post('/movies', (req, res) => {
-    const newMovie = {
-        id: movies.length + 1,
-        title: req.body.title,
-        director: req.body.director,
-        release_date: req.body.release_date
-    }
-    // push it into our array and send back a response with status code 201 - created
+    const newMovie = req.body
+
+    console.log(newMovie)
     movies.push(newMovie)
-    res.status(201).json(newMovie)
-    res.send()
+    res.send("Added !")
 })
 
 // Get app to listen to port
