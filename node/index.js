@@ -39,6 +39,11 @@ let movies =[
     }
   ]
   
+// Create a middleware
+app.use((req, res, next) => {
+    console.log("Hello from middleware")
+    next()
+})
 
 // get movies from the list
 app.get('/movies', (req, res) => {
