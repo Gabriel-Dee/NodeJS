@@ -54,7 +54,7 @@ app.post('/movies', (req, res) => {
     res.send("Added !")
 })
 
-// search for a movie in the list
+// search for a movie in the list.
 app.get('/movies/:id', (req, res) => {
     const id = req.params.id
      for (let movie of movies){
